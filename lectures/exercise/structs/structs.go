@@ -17,7 +17,12 @@
 
 package main
 
-import "fmt"
+type Rectangle struct {
+	length int
+	width int
+}
+
+func Area
 
 func main() {
 
