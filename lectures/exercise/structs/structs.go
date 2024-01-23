@@ -22,7 +22,9 @@ type Rectangle struct {
 	width int
 }
 
-func Area
+func (r Rectangle)
+
+func Area()
 
 func main() {
 
