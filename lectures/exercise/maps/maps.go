@@ -17,8 +17,6 @@
 
 package main
 
-import "fmt"
-
 const (
 	Online      = 0
 	Offline     = 1
@@ -28,4 +26,5 @@ const (
 
 func main() {
 	servers := []string{"darkstar", "aiur", "omicron", "w359", "baseline"}
+	// not updated
 }

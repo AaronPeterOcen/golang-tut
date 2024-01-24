@@ -18,5 +18,28 @@ import "fmt"
 
 type Part string
 
+func contents(line []Part){
+	for i := 0; i <len(line); i++ {
+		parts := line[i]
+		fmt.Println(parts)
+	}
+}
+
 func main() {
+	line := make([]Part, 3)
+
+	line[0] = "one"
+	line[1] = "two"
+	line[2] = "three"
+
+	fmt.Println("3")
+	contents(line)
+
+	line = append(line, "four", "five")
+	fmt.Println("2")
+	contents(line)
+
+	line = line[3:]
+	fmt.Println("4n5")
+	contents(line)
 }
