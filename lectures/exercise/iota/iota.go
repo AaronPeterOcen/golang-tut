@@ -14,9 +14,41 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+const (
+	Add = iota
+	Subtract
+	Multiply
+	Divide
+)
+
+type Operation int
+
+func (op  Operation) calculate(a, b int) int {
+	switch op {
+	case Add:
+		return a + b
+	case Subtract:
+		return a - b
+	case Multiply:
+		return a * b
+	case Divide:
+		return a / b
+	}
+	panic("Error 404")
+}
 
 func main() {
+	add := Operation(Add)
+	sub := Operation(Subtract)
+	mul := Operation(Multiply)
+	div := Operation(Divide)
+
+
+
 	fmt.Println(add.calculate(2, 2)) // = 4
 
 	fmt.Println(sub.calculate(10, 3)) // = 7
